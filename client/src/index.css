@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+/*
+font-family: 'Lobster Two', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Baloo Tamma 2', cursive;
+*/
+
+:root {
+    --bg-primary: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    background: #000;
+}
+
+input, button {
+    outline: none;
+    border: none;
+    min-width: 10px;
+}
+ul{
+    list-style: none;
+}
+
+a {
+    text-decoration: none
+}
+
+svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+/* scroll bar */
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgb(170, 0, 255) 0%, rgb(60, 0, 255) 100%);
+}
+
+/* landing container */
+
+.landing-wrapper {
+    font-family: 'Baloo Tamma 2', cursive;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "nav nav nav nav nav nav""lnd-img lnd-img lnd-img lnd-img lnd-img lnd-img""prj-title prj-title prj-title prj-title prj-title prj-title" "projects projects projects projects comments comments""srvs srvs srvs srvs srvs srvs""test test test test test test""btm btm btm btm btm btm";
+}
+.test{
+    grid-area: test;
+}
+.test svg{
+    height: 100rem;
+    width:100rem;
+}
+/* header */
+.header-wrpr {
+    grid-area: nav;
+    display: flex;
+    background: linear-gradient(90deg, rgb(153, 0, 255) 0%, rgb(55, 0, 255) 100%);
+    min-height: 2.5rem;
+    align-items: center;
+}
+
+.header-wrpr .nav-btn {
+    padding: .4rem 1rem;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: .4rem;
+    margin: .4rem;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(170, 0, 255) 0%, rgb(60, 0, 255) 100%);
+}
+.header-user-pic{
+    height:2rem;
+    width:2rem;
+    border-radius: 50%;
+}
+.nav-user {
+    display: flex;
+    align-items: center;
+}
+/* project container */
+.projects-wrapper {
+    grid-area: projects;
+    display: grid;
+    column-gap: 1rem;
+    row-gap: .4rem;
+    margin: .4rem 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+/* project */
+.project-wrpr {
+    display: flex;
+    flex-direction: column;
+    padding: .4rem;
+    border-radius: 4px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.23);
+}
+
+.prj-title {
+    grid-area: prj-title;
+    text-align: center;
+}
+
+.prj-btn {
+    display: flex;
+    background: linear-gradient(90deg, rgb(146, 26, 226) 0%, rgb(0, 68, 255) 100%);
+    padding: .4rem;
+    justify-content: center;
+    color:#fff;
+    cursor: pointer;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.project-wrpr img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.project-wrpr span {
+    margin: auto;
+}
+.project-wrpr h2{
+    text-align: center;
+}
+.project-wrpr ul{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding: .4rem;
+}
+.project-wrpr ul li{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 2px;
+    border-radius:1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* comment box */
+.comment-wrpr {
+    grid-area: comments;
+    border-radius: .4rem;
+    overflow: hidden;
+    margin:.4rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    align-self: start;
+}
+
+.comment-header {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(137, 0, 204, 1) 0%, rgba(47, 0, 204, 1) 100%);
+}
+
+.comment-header h3 {
+    text-align: center;
+    color: #fff;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-weight: 200;
+    padding: 1rem 0;
+}
+
+.comment-ip-wrpr {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: .4rem;
+    overflow: hidden;
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+.user-picture {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+}
+
+.comment-ip-wrpr button {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(170, 0, 255) 0%, rgb(60, 0, 255) 100%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: .4rem;
+    margin: 0 0 0 .4rem;
+    color: #fff;
+    border-radius: .4rem;
+}
+
+.comment-ip-wrpr input {
+    border: 1px solid rgba(160, 160, 160, 0.867);
+    padding: .4rem;
+    flex: 1;
+    border-radius: .4rem;
+    margin: 0 0 0 .4rem;
+    
+}
+
+.avtar {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: rgb(146, 146, 146);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avtar svg {
+    height: 1rem;
+    width: 1rem;
+    fill: rgb(70, 70, 70);
+    margin: auto;
+}
+
+.comment-list {
+    overflow-y: scroll;
+    height: 50vh;
+    overflow-x: hidden;
+    scrollbar-color: rgb(153, 0, 255) rgb(255, 255, 255);
+    scrollbar-width: thin;
+}
+
+.comment-list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.comment-list::-webkit-scrollbar {
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+.comment-list::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgb(170, 0, 255) 0%, rgb(60, 0, 255) 100%);
+}
+/* comment */
+.comment-list li {
+    display: flex;
+    align-items: center;
+    padding: .4rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+.comment-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 0 0 0 1rem;
+}
+.cmt-up{
+    display: flex;
+    justify-content: space-between;
+    color:rgb(131, 131, 131);
+
+}
+.cmt-info svg {
+    height: .7rem;
+    width: .7rem;
+    fill:rgb(98, 0, 255);
+}
+
+.comment-user {
+}
+
+.comment-text {
+}
+
+.comment-time {
+    font-size: .8rem;
+    min-width: 2rem;
+}
+
+.comment-time svg {
+    width: .6rem;
+    height: .6rem;
+}
+/* services */
+.services-wrapper{
+    grid-area:srvs;
+    display: flex;
+    text-align: center;
+    margin:1rem 0;
+    color:rgb(153, 0, 255);
+    
+}
+.srvs-wrpr{
+    flex: 1;
+    padding: .4rem;
+    margin:0 1rem;
+}
+/* bottom */
+.btm-wrpr {
+    background: linear-gradient(90deg, rgb(146, 26, 226) 0%, rgb(0, 68, 255) 100%);
+    grid-area: btm;
+}
+
+.ic-cntr {
+    display: flex;
+    justify-content: center;
+}
+
+.ic-cntr svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: .4rem;
+    margin: 1rem;
+    fill: rgb(255, 255, 255);
+}
+
+.dev-tg {
+    display: flex;
+    justify-content: center;
+}
+
+.dev-tg span {
+    color: #fff;
+    font-family: 'Lobster Two', cursive;
+}
+
+
+.cmt-info {
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+}
+
+.cmt-info span {
+    margin: 0 0 0 .4rem;
+}
+.logo{   
+    font-size:2rem;
+    color: #fff;
+    font-weight: 100;
+}
+@media only screen and (max-width: 800px) {
+    .landing-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "nav nav nav nav""lnd-img lnd-img lnd-img lnd-img""prj-title prj-title prj-title prj-title" "projects projects comments comments""srvs srvs srvs srvs""btm btm btm btm";
+    }
+    .services-wrapper{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .landing-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "nav nav nav""lnd-img lnd-img lnd-img""prj-title prj-title prj-title" "projects projects projects ""comments comments comments""srvs srvs srvs""btm btm btm";
+    }
+    .services-wrapper{
+        flex-direction: column;
+    }
+}
